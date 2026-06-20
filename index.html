@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HabitPAY — Todos os links</title>
+<title>HabitPAY — LINKS</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
@@ -132,6 +132,24 @@
     to{ opacity:1; transform: translateY(0); }
   }
 
+  .badge-award{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    margin: 0 auto 36px;
+    padding:8px 16px;
+    border-radius:999px;
+    background: rgba(74,222,128,0.08);
+    border:1px solid rgba(74,222,128,0.3);
+    color: var(--green);
+    font-size:12.5px;
+    font-weight:500;
+    letter-spacing:0.01em;
+    opacity:0;
+    animation: rise 0.7s 0.3s cubic-bezier(.16,1,.3,1) both;
+  }
+  .badge-award svg{ flex-shrink:0; }
+
   /* ---------- seções ---------- */
   .section{
     width:100%;
@@ -256,12 +274,42 @@
   }
   .link-card.primary .link-icon svg{ color:#0c1730; }
 
+  /* ---------- about block ---------- */
+  .about-card{
+    width:100%;
+    padding:22px 22px;
+    background: var(--navy-soft);
+    border:1px solid var(--hairline);
+    border-radius:14px;
+    margin-top:8px;
+    opacity:0;
+    animation: rise 0.6s 0.6s cubic-bezier(.16,1,.3,1) both;
+  }
+  .about-card p{
+    font-size:13.5px;
+    line-height:1.65;
+    color: var(--ink-dim);
+  }
+  .about-card p + p{ margin-top:10px; }
+  .about-card strong{ color: var(--ink); font-weight:600; }
+  .about-card .location-line{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-top:14px;
+    padding-top:14px;
+    border-top:1px solid var(--hairline);
+    font-size:12px;
+    color: var(--ink-dim);
+  }
+  .about-card .location-line svg{ flex-shrink:0; color: var(--blue-bright); }
+
   /* ---------- footer ---------- */
   footer{
-    margin-top:48px;
+    margin-top:40px;
     text-align:center;
     opacity:0;
-    animation: rise 0.6s 0.5s cubic-bezier(.16,1,.3,1) both;
+    animation: rise 0.6s 0.66s cubic-bezier(.16,1,.3,1) both;
   }
   footer .tag{
     font-size:12px;
@@ -271,6 +319,12 @@
   footer .tag b{
     color: var(--ink);
     font-weight:600;
+  }
+  footer .legal{
+    margin-top:10px;
+    font-size:11px;
+    color: rgba(170,180,200,0.55);
+    line-height:1.7;
   }
 
   /* stagger animation delays */
@@ -335,8 +389,13 @@
     </div>
 
     <p class="eyebrow">Link in bio</p>
-    <h1>Transformando o jeito<br>que você <span class="accent">lida com dinheiro</span></h1>
-    <p class="subtitle">Acompanhe a HabitPAY, entre na lista de espera e veja os bastidores do produto.</p>
+    <h1>Transformando <span class="accent">hábitos</span><br>em liberdade financeira</h1>
+    <p class="subtitle">Inteligência financeira e hábitos monetários saudáveis. Acompanhe a HabitPAY e entre na lista de espera.</p>
+
+    <div class="badge-award">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14z"/><path d="m8.21 13.89-1.21 7.11 5-3 5 3-1.21-7.12"/></svg>
+      Selecionada para o Founders Club Growth Challenge
+    </div>
 
     <div class="section">
       <div class="section-label">Comece por aqui</div>
@@ -407,15 +466,31 @@
           </div>
           <div class="link-text">
             <div class="link-title">Canal do WhatsApp</div>
-            <div class="link-desc">Novidades em primeira mão</div>
+            <div class="link-desc">HabitPAY</div>
           </div>
           <svg class="link-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
     </div>
 
+    <div class="section">
+      <div class="section-label">Sobre a HabitPAY</div>
+      <div class="about-card">
+        <p>A HabitPAY é uma <strong>fintech e startup brasileira</strong> focada em inteligência financeira e no desenvolvimento de hábitos monetários saudáveis. A proposta não é apenas oferecer controle financeiro, mas transformar a relação das pessoas com o dinheiro por meio da consistência e inteligência.</p>
+        <p>Com sede no sudoeste do Paraná e forte atuação regional, a empresa vem se destacando no cenário nacional — recentemente foi selecionada para o <strong>Founders Club Growth Challenge</strong>, ficando entre as melhores startups do país.</p>
+        <div class="location-line">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Dois Vizinhos, PR — Brasil
+        </div>
+      </div>
+    </div>
+
     <footer>
-      <p class="tag"><b>HabitPAY</b> · construindo o hábito de prosperar</p>
+      <p class="tag"><b>HabitPAY</b> · Transformando hábitos em liberdade financeira</p>
+      <p class="legal">
+        CNPJ 66.877.250/0001-12<br>
+        R. Pedro Álvares Cabral, 905 — Centro Norte, Dois Vizinhos - PR, 85660-000
+      </p>
     </footer>
   </main>
 
